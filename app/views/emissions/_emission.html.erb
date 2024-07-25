@@ -1,0 +1,22 @@
+<div id="<%= dom_id emission %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= emission.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Presenter:</strong>
+    <%= emission.presenter %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= emission.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Poster:</strong>
+    <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
+  </p>
+
+</div>
