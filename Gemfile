@@ -52,6 +52,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'rails-erd', '~> 1.5', '>= 1.5.2'
 end
 
 group :development do
@@ -64,5 +65,5 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-gem 'rails-erd', '~> 1.5', '>= 1.5.2'
+
 gem 'rubocop', '>= 1.0', ' < 2.0'
