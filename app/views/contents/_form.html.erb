@@ -32,7 +32,7 @@
 
   <div class="my-5">
     <%= form.label :emission_id %>
-    <%= form.text_field :emission_id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.collection_select :emission_id, Emission.all, :id, :title %>
   </div>
 
   <div class="inline">
