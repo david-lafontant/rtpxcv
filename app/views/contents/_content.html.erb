@@ -1,0 +1,22 @@
+<div id="<%= dom_id content %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= content.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= content.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Media:</strong>
+    <%= link_to content.media.filename, content.media if content.media.attached? %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Emission:</strong>
+    <%= content.emission_id %>
+  </p>
+
+</div>
