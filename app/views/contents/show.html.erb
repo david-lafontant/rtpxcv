@@ -3,13 +3,15 @@
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
-
     <%= render @content %>
-
-    <%= link_to "Edit this content", edit_content_path(@content), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <% if can? :update, @content %>
+      <%= link_to "Edit this content", edit_content_path(@content), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <% end %>
     <%= link_to "Back to contents", contents_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this content", @content, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
+    <% if can? :destroy, @content %>
+      <div class="inline-block ml-2">
+        <%= button_to "Destroy this content", @content, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      </div>
+    <% end %>
   </div>
 </div>

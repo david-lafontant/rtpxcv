@@ -3,13 +3,15 @@
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
-
     <%= render @emission %>
-
-    <%= link_to "Edit this emission", edit_emission_path(@emission), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <% if can? :update, @emission %>
+      <%= link_to "Edit this emission", edit_emission_path(@emission), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <% end %>
     <%= link_to "Back to emissions", emissions_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this emission", @emission, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
+    <% if can? :destroy, @emission %>
+      <div class="inline-block ml-2">
+        <%= button_to "Destroy this emission", @emission, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      </div>
+    <% end %>
   </div>
 </div>
