@@ -4,6 +4,7 @@ ruby '3.2.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
+gem 'dotenv-rails', '~> 3.1', '>= 3.1.2', require: 'dotenv/load'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -65,5 +66,6 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
+gem 'cancancan', '~> 3.6', '>= 3.6.1'
+gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'rubocop', '>= 1.0', ' < 2.0'
