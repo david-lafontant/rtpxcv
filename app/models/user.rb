@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  
   has_many :articles
   has_many :contents
   # Include default devise modules. Others available are:
