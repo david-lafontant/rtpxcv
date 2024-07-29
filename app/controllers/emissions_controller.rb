@@ -22,6 +22,7 @@ class EmissionsController < ApplicationController
   # POST /emissions or /emissions.json
   def create
     @emission = Emission.new(emission_params)
+    @emission.user = current_user
 
     respond_to do |format|
       if @emission.save
