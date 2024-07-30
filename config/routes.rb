@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'publics/home'
-  get 'publics/articles'
-  get 'publics/emissions'
-  get 'publics/about'
-  get 'publics/contact'
+  # get '/home'         , to: 'publics#home'         , as:  'home'           
+  get '/articles'     , to: 'publics#articles'     , as:  'publics_articles'     
+  get '/emissions'    , to: 'publics#emissions'    , as:  'publics_emissions'        
+  get '/about'        , to: 'publics#about'        , as:  'about'      
+  get '/contact'      , to: 'publics#contact'      , as:  'contact'      
+  
   devise_for :users
 
   resources :contents
