@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'publics/home'
+  get 'publics/articles'
+  get 'publics/emissions'
+  get 'publics/about'
+  get 'publics/contact'
   devise_for :users
 
   resources :contents
