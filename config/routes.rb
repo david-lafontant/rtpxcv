@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   # get '/home'         , to: 'publics#home'         , as:  'home'           
-  get '/articles'     , to: 'publics#articles'     , as:  'publics_articles'     
-  get '/emissions'    , to: 'publics#emissions'    , as:  'publics_emissions'        
+  get '/published-articles'     , to: 'publics#articles'     , as:  'publics_articles'     
+  get '/published-emissions'    , to: 'publics#emissions'    , as:  'publics_emissions'        
   get '/about'        , to: 'publics#about'        , as:  'about'      
   get '/contact'      , to: 'publics#contact'      , as:  'contact'      
   
   devise_for :users
+
+Article.all.where(published: true).each do |article|
+  get "/published-artcles/#{article.slug}", controller: :publics, action: :show_article, id: article.id
+end
+
 
   resources :contents
   resources :emissions
