@@ -1,4 +1,18 @@
 <div>
   <h1 class="font-bold text-4xl">Publics#articles</h1>
-  <p>Find me in app/views/publics/articles.html.erb</p>
+  <div id="articles" class="min-w-full">
+    <% @articles.each do |article| %>
+      <p>
+        <%= article.title%>
+      </p>
+      <p>
+        <%= article.slug%>
+      </p>
+      <p>
+        <%= link_to  published_article(article) do %>
+          <%=article.title%>
+        <%end%>
+      </p>
+    <% end %>
+  </div>
 </div>
