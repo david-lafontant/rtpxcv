@@ -1,18 +1,19 @@
-<div >
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= @article.title %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Slug:</strong>
-    <%= @article.slug %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Body:</strong>
-    <%= @article.body %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Published:</strong>
-    <%= @article.published %>
-  </p>
+<div class="px-24 bg-white-800 text-gray-700">
+  <div class="my-5">
+    <h1 class="font-medium mb-1 text-gray-900"><%= @article.title %></h1>
+  </div>
+  <div class="my-5">
+    <h2 class="block font-medium mb-1"> <%= @article.slug %></h2>
+    <strong class="block font-medium mb-1"> <%= distance_of_time_in_words_to_now(@article.created_at)%></strong>
+  </div>
+  <div class="my-5">
+    <article class="mb-1 "> <%= @article.body %></article>
+  </div>
+  <div class="my-5">
+    <strong class="block font-medium mb-1"> <%= User.find(@article.user_id).email %></strong>
+    <% if @article.created_at != @article.updated_at %>
+      <strong class="block font-medium mb-1"> <%= @article.created_at%></strong>
+      <strong class="block font-medium mb-1"> <%= @article.updated_at%></strong>
+    <%end%>
+  </div>
 </div>
