@@ -3,6 +3,11 @@ class PublicsController < ApplicationController
   end
 
   def articles
+    @articles = Article.all.where(published: true)
+  end
+
+  def show_article
+    @article = Article.find(params[:id])
   end
 
   def emissions
