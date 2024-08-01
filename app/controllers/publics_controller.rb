@@ -11,6 +11,7 @@ class PublicsController < ApplicationController
   end
 
   def emissions
+    @emissions = Emission.all
   end
 
   def about
