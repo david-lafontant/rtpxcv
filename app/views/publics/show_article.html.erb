@@ -1,6 +1,6 @@
-<div class="px-24 bg-white-800 text-gray-700">
+<div class="px-24 bg-gray-200 text-gray-700">
   <div class="my-5">
-    <h1 class="font-medium mb-1 text-gray-900"><%= @article.title %></h1>
+    <h1 class="text-4xl font-extrabold text-center"><%= @article.title %></h1>
   </div>
   <div class="my-5">
     <h2 class="block font-medium mb-1"> <%= @article.slug %></h2>
@@ -12,8 +12,8 @@
   <div class="my-5">
     <strong class="block font-medium mb-1"> <%= User.find(@article.user_id).email %></strong>
     <% if @article.created_at != @article.updated_at %>
-      <strong class="block font-medium mb-1"> <%= @article.created_at%></strong>
-      <strong class="block font-medium mb-1"> <%= @article.updated_at%></strong>
+      <strong class="block font-medium mb-1 italic"> Writed:&nbsp;<%= @article.created_at.strftime("%d %B  %Y, %l:%M%P")%></strong>
+      <strong class="block font-medium mb-1 italic"> Updated:&nbsp;<%= @article.updated_at.strftime("%d %B  %Y, %l:%M%P")%></strong>
     <%end%>
   </div>
 </div>
