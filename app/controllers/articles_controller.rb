@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-    @article.user = current_user
+    @article.user_id = current_user.id
 
     respond_to do |format|
       if @article.save
@@ -67,6 +67,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:title, :slug, :body, :published)
+    params.require(:article).permit(:title, :slug, :body, :published, :user_id)
   end
 end
