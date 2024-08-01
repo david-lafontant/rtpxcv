@@ -22,7 +22,7 @@ class EmissionsController < ApplicationController
   # POST /emissions or /emissions.json
   def create
     @emission = Emission.new(emission_params)
-    @emission.user = current_user
+    @emission.user_id = current_user.id
 
     respond_to do |format|
       if @emission.save
@@ -67,6 +67,6 @@ class EmissionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def emission_params
-    params.require(:emission).permit(:title, :presenter, :description, :poster)
+    params.require(:emission).permit(:title, :presenter, :description, :poster, :user_id)
   end
 end

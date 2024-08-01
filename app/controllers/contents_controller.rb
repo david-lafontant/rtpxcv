@@ -22,7 +22,7 @@ class ContentsController < ApplicationController
   # POST /contents or /contents.json
   def create
     @content = Content.new(content_params)
-    @content.user = current_user
+    @content.user_id = current_user.id
 
     respond_to do |format|
       if @content.save
@@ -67,6 +67,6 @@ class ContentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def content_params
-    params.require(:content).permit(:title, :description, :media, :emission_id)
+    params.require(:content).permit(:title, :description, :media, :emission_id, :user_id)
   end
 end
