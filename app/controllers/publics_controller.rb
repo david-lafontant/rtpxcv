@@ -1,6 +1,5 @@
 class PublicsController < ApplicationController
-  def home
-  end
+  def home; end
 
   def articles
     @articles = Article.all.where(published: true)
@@ -18,9 +17,7 @@ class PublicsController < ApplicationController
     @emission = Emission.find(params[:id])
   end
 
-  def about
-  end
+  def about; end
 
-  def contact
-  end
+  def contact; end
 end
