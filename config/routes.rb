@@ -11,6 +11,10 @@ Article.all.where(published: true).each do |article|
   get "/published-artcles/#{article.slug}", controller: :publics, action: :show_article, id: article.id
 end
 
+Emission.all.each do |emission|
+  get "/published-emissions/#{emission.title}", controller: :publics, action: :show_emission, id: emission.id
+end
+
 
   resources :contents
   resources :emissions
