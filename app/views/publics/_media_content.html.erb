@@ -1,0 +1,17 @@
+<%= tag.div id: dom_id(emission_content), class: "flex min-h-screen items-center justify-center bg-gray-100" do %>
+  <div class="w-2/3">
+    <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500 border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8  items-center">
+      <div class="flex items-center space-x-4">
+        <%= image_tag poster,  class:"flex-none rounded-lg bg-slate-100", alt: "emission-poster", size: "88x88", loading: "lazy" %>
+        <div class="min-w-0 flex-auto space-y-1 font-semibold">
+          <h2 class="text-slate-500 dark:text-slate-400 text-sm leading-6 truncate">
+            <%= emission_content.title %>
+          </h2>
+          <p class="text-slate-900 dark:text-slate-50 text-lg">
+            <%= emission_content.description %>
+          </p>
+        </div>
+      </div>
+      <%= audio_tag(emission_content.media, controls: true, class: "show-audio") %>
+    </div>
+  <% end %>

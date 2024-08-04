@@ -1,0 +1,133 @@
+<div class="bg-white">
+  <div class="flex justify-between items-center py-28 px-5">
+    <div class="w-1/2">
+      <h1 class="text-5xl font-semibold text-gray-800">Radio&nbsp;T&eacute;l&eacute;</h1>
+      <h2 class="text-xl font-semibold text-gray-600 mt-4">Que&nbsp;l&apos;emotion&nbsp;soit!</h2>
+      <p class="text-gray-600 mt-4">
+        <span>
+          107.8&nbsp;FM&nbsp;St&eacute;r&eacute;o
+        </span>
+        <br>
+        <span>
+          Canal&nbsp;56
+        </span>
+      </p>
+    </div>
+    <div class="w-1/2">
+      <%= image_tag 'logo', alt: "logo of the radio station", class: "w-full h-auto splash_border" %>
+    </div>
+  </div>
+</div>
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
+    <div class="flex flex-col justify-center">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Radio Tele en Direct!</h1>
+      <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+      <!--
+      
+      <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+        <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+          Get started
+          <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+        </a>
+        <a href="#" class="py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+          Learn more
+        </a>
+      </div>
+      -->
+    </div>
+    <div>
+      <iframe class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl" src="https://www.youtube.com/embed/qfFPk1aiOvw?si=cC9_ye69Cmsv_STx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="bg-white p-10 mt-10">
+  <h2 class="text-center text-3xl">Nos valeurs</h2>
+  <p class="mt-4">
+    Irure sunt eu et pariatur laborum. Ipsum proident eu cillum sint culpa laboris velit commodo magna. Sunt labore minim ipsum duis sint Lorem deserunt esse quis velit occaecat. Voluptate deserunt proident sit pariatur ut officia in.
+  </p>
+</div>
+<div class="bg-white grid grid-cols-4 gap-10 p-10 mt-10">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam aliquid amet voluptates reiciendis quo dolor dolorem explicabo voluptatibus, consectetur veniam harum, vitae tempora ipsa exercitationem eligendi odio iusto corporis.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam aliquid amet voluptates reiciendis quo dolor dolorem explicabo voluptatibus, consectetur veniam harum, vitae tempora ipsa exercitationem eligendi odio iusto corporis.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam aliquid amet voluptates reiciendis quo dolor dolorem explicabo voluptatibus, consectetur veniam harum, vitae tempora ipsa exercitationem eligendi odio iusto corporis.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam aliquid amet voluptates reiciendis quo dolor dolorem explicabo voluptatibus, consectetur veniam harum, vitae tempora ipsa exercitationem eligendi odio iusto corporis.
+  </p>
+</div>
+<div class="bg-gradient-to-r from-cyan-400 to-cyan-600 p-10 rounded-lg mt-10">
+  <h2 class="text-white text-3xl text-center"></h2>
+  <p class="text-white mt-2 text-center">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod obcaecati repellat natus neque, culpa quam sapiente debitis amet saepe veniam quisquam soluta eveniet quaerat explicabo cumque! Quo modi consectetur ab?
+  </p>
+  <div class="flex justify-center">
+    <button class="mt-4 bg-white text-cyan-600 rounded-lg px-4 py-2">Contact us</button>
+  </div>
+</div>
+<div class="bg-white p-10 mt-10">
+  <h2 class="text-lg font-bold">Emissions</h2>
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <!-- Item 1 -->
+      <div class=" hidden duration-700 ease-in-out" data-carousel-item>
+        <%= image_tag "dummy1.jpg", class: "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2", alt: "dummy ..." %>
+      </div>
+      <!-- Item 2 -->
+      <div class=" hidden duration-700 ease-in-out" data-carousel-item>
+        <%= image_tag "dummy2.jpg", class: "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2",  alt: "dummy ..." %>
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <%= image_tag "dummy3.jpg", class: "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2",  alt: "dummy ..." %>
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <%= image_tag "dummy4.jpg", class: "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2", alt: "dummy ..." %>
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <%= image_tag "dummy5.jpg", class: "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2", alt: "dummy ..." %>
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+</div>
+<!-- 
+# <div class="bg-white p-10 mt-10">
+#   <h2 class="text-lg font-bold">Con quienes trabajamos</h2>
+#   
+# </div>
+-->

@@ -1,0 +1,8 @@
+.show-audio {
+  display: flex;
+  align-items: center;
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  background-color: inherit;
+  width: 100%;
+}
