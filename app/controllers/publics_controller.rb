@@ -14,6 +14,10 @@ class PublicsController < ApplicationController
     @emissions = Emission.all
   end
 
+  def show_emission
+    @emission = Emission.find(params[:id])
+  end
+
   def about
   end
 
