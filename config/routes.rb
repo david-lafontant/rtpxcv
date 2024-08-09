@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 Article.all.where(published: true).each do |article|
-  get "/published-artcles/#{article.slug}", controller: :publics, action: :show_article, id: article.id
+  get "/published-articles/#{article.slug}", controller: :publics, action: :show_article, id: article.id
 end
 
 Emission.all.where(published: true).each do |emission|
