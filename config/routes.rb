@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 Article.all.where(published: true).each do |article|
-  get "/published-artcles/#{article.slug}", controller: :publics, action: :show_article, id: article.id
+  get "/published-articles/#{article.slug}", controller: :publics, action: :show_article, id: article.id
 end
 
 Emission.all.where(published: true).each do |emission|
@@ -16,9 +16,9 @@ Emission.all.where(published: true).each do |emission|
 end
 
 
-  resources :contents
-  resources :emissions
-  resources :articles
+  resources :contents, path: "rtpx/admin/contents"
+  resources :emissions, path: "rtpx/admin/emissions"
+  resources :articles, path: "rtpx/admin/articles"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
