@@ -67,6 +67,6 @@ class EmissionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def emission_params
-    params.require(:emission).permit(:title, :presenter, :description, :poster, :user_id)
+    params.require(:emission).permit(:title, :presenter, :description, :poster, :published, :user_id)
   end
 end

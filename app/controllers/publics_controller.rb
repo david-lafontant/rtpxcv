@@ -10,7 +10,7 @@ class PublicsController < ApplicationController
   end
 
   def emissions
-    @emissions = Emission.all
+    @emissions = Emission.all.where(published: true)
   end
 
   def show_emission
